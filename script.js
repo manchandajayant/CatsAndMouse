@@ -3,12 +3,15 @@
 
 
 function catAndMouse(x, y, z) {
-   if (y - x === z) {
-    return "Mouse C";
-  } else if (y - z > x - z) {
-    return "Cat B";
-  } else if (x - z > y - z) {
-    return "Cat A";
-  }
+    let catA = Math.abs(z - x)
+    let catB = Math.abs(z - y)
+
+    if (catA < catB) {
+        return "Cat A"
+    } else if (catB < catA) {
+        return "Cat B"
+    } else {
+        return "Mouse C"
+    }
 
 }
