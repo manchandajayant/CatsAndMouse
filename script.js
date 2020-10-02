@@ -2,9 +2,9 @@
 
 
 
-function catAndMouse(x, y, z) {
-    let catA = Math.abs(z - x)
-    let catB = Math.abs(z - y)
+function catAndMouse(catA, catB, mouseC) {
+    let catAPosition = Math.abs(mouseC - catA)
+    let catBPosition = Math.abs(mouseC - catB)
 
     if (catA < catB) {
         return "Cat A"
